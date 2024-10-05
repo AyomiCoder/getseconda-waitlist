@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views')); // Ensure correct path
 app.set('view engine', 'ejs');
+
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI).then(() => {
   console.log('Connected to MongoDB!');
